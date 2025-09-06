@@ -3,22 +3,16 @@ site_name: Infraestrutura de Dados - INCT LABPLAN
 nav: 
   - Home:
     - Olá!: index.md
-    - Documentação da infraestrutura:
-      - Visão geral da infraestrutura: documentacao-infraestrutura/visao-geral-infra.md
-      - Big Query (BQ): documentacao-infraestrutura/big-query.md 
-      - Data Build Tool (DBT): documentacao-infraestrutura/dbt.md
-      - Metabase: documentacao-infraestrutura/metabase.md
-    - Documentação do Processo de Dados:
-      - Processo de dados: documentacao-processo-dados/processo-dados.md
-      - Manual de estilo: documentacao-processo-dados/manual-estilo.md
-      - Metadados: documentacao-processo-dados/metadados.md
-    - Governança de Acessos ao Datahub e Controle de Custos:
-      - Governança de Acessos e Compartilhamento no Datalake: governanca/governanca-acessos-compartilhamento.md
-      - Controle de Custos: governanca/controle-custos.md
-    - Guias de Acesso e Subida dos Dados:
-      - Configurando acesso aos dados com R: guias-acessos-subida-dados/configurar-acesso-R.md
-      - Subindo dados com R: guias-acessos-subida-dados/subindo-dados-R.md
-    
+    - Visão geral da infraestrutura:
+      - Ckan: infraestrutura/ckan.md
+      - Shiny: infraestrutura/shiny.md
+    - Governança:
+      - Política de Governança: governanca/politica-governanca.md
+      - Manual de Estilo: governanca/manual-estilo.md
+      - Metadados: governanca/metadados.md
+    - Processo de Dados:
+      - Processo de dados: processo-dados/repositorio-codigo.md
+      - Alimentação do CKAN: processo-dados/subida-dados.md
 
 repo_url: https://github.com/inct-labplan/site-governanca#
 repo_name: site-governanca
@@ -61,8 +55,5 @@ markdown_extensions:
   - mkdocs_click
   - attr_list
   - pymdownx.superfences
-  - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
   - pymdownx.tabbed:
       alternate_style: true
