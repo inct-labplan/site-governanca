@@ -1,0 +1,68 @@
+site_name: Infraestrutura de Dados - INCT LABPLAN
+
+nav: 
+  - Home:
+    - Olá!: index.md
+    - Documentação da infraestrutura:
+      - Visão geral da infraestrutura: documentacao-infraestrutura/visao-geral-infra.md
+      - Big Query (BQ): documentacao-infraestrutura/big-query.md 
+      - Data Build Tool (DBT): documentacao-infraestrutura/dbt.md
+      - Metabase: documentacao-infraestrutura/metabase.md
+    - Documentação do Processo de Dados:
+      - Processo de dados: documentacao-processo-dados/processo-dados.md
+      - Manual de estilo: documentacao-processo-dados/manual-estilo.md
+      - Metadados: documentacao-processo-dados/metadados.md
+    - Governança de Acessos ao Datahub e Controle de Custos:
+      - Governança de Acessos e Compartilhamento no Datalake: governanca/governanca-acessos-compartilhamento.md
+      - Controle de Custos: governanca/controle-custos.md
+    - Guias de Acesso e Subida dos Dados:
+      - Configurando acesso aos dados com R: guias-acessos-subida-dados/configurar-acesso-R.md
+      - Subindo dados com R: guias-acessos-subida-dados/subindo-dados-R.md
+    
+
+repo_url: https://github.com/inct-labplan/site-governanca#
+repo_name: site-governanca
+
+
+theme:
+  name: material
+  icon:
+    repo: fontawesome/brands/github
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/toggle-switch-outline
+        name: Mudar para tema escuro
+    - scheme: slate
+      toggle:
+        icon: material/toggle-switch-off
+        name: Mudar para tema claro
+  language: pt
+  font:
+    text: Lato
+  favicon: static/images/logos/favicon.jpg
+  logo: static/images/logos/logo.png
+  features:
+    - header.autohide
+    - navigation.sections
+    - navigation.top
+    - toc.integrate
+    - content.tabs.link
+
+plugins:
+  - mkdocs-video
+
+extra_css:
+- static/css/custom.css
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - mkdocs_click
+  - attr_list
+  - pymdownx.superfences
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.tabbed:
+      alternate_style: true
