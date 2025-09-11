@@ -28,4 +28,4 @@ jobs:
 
       - name: Build and deploy docs
         working-directory: .
-        run: uv run mkdocs gh-deploy --force --config-file /site-governanca/mkdocs.yml
+        run: uv run mkdocs gh-deploy --force --config-file ./site-governanca/mkdocs.yml
