@@ -1,0 +1,29 @@
+push:
+    branches:
+        - main
+        - master
+        - poc-politica-governanca
+    paths:
+        - 'site-governanca/docs/**'
+        - '.github/workflows/deploy-docs.yml'
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+
+      - name: Set up Python
+        run: uv python install
+        working-directory: python-package
+
+      - name: Install dependencies
+        run: uv sync --locked --all-groups
+        working-directory: python-package
+
+      - name: Build and deploy docs
+        working-directory: python-package
+        run: uv run mkdocs gh-deploy --force --config-file ../site-governanca/mkdocs.yml
