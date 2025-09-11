@@ -24,8 +24,8 @@ jobs:
 
       - name: Install dependencies
         run: uv sync --locked --all-groups
-        working-directory: python-package
+        working-directory: .
 
       - name: Build and deploy docs
-        working-directory: python-package
+        working-directory: .
         run: uv run mkdocs gh-deploy --force --config-file ../site-governanca/mkdocs.yml
