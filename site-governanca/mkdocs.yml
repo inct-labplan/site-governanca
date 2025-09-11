@@ -4,8 +4,7 @@ nav:
   - Home:
     - Olá!: index.md
     - Visão geral da infraestrutura:
-      - Ckan: infraestrutura/ckan.md
-      - Shiny: infraestrutura/shiny.md
+      - Componentes da Infraestrutura: infraestrutura/componentes-infraestrutura.md
     - Governança:
       - Política de Governança: governanca/politica-governanca.md
       - Manual de Estilo: governanca/manual-estilo.md
