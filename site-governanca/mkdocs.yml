@@ -1,0 +1,58 @@
+site_name: Infraestrutura de Dados - INCT LABPLAN
+
+nav: 
+  - Home:
+    - Olá!: index.md
+    - Visão geral da infraestrutura:
+      - Componentes da Infraestrutura: infraestrutura/componentes-infraestrutura.md
+    - Governança:
+      - Política de Governança: governanca/politica-governanca.md
+      - Manual de Estilo: governanca/manual-estilo.md
+      - Metadados: governanca/metadados.md
+    - Processo de Dados:
+      - Processo de dados: processo-dados/repositorio-codigo.md
+      - Alimentação do CKAN: processo-dados/subida-dados.md
+
+repo_url: https://github.com/inct-labplan/site-governanca#
+repo_name: site-governanca
+
+
+theme:
+  name: material
+  icon:
+    repo: fontawesome/brands/github
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/toggle-switch-outline
+        name: Mudar para tema escuro
+    - scheme: slate
+      toggle:
+        icon: material/toggle-switch-off
+        name: Mudar para tema claro
+  language: pt
+  font:
+    text: Lato
+  favicon: static/images/logos/favicon.jpg
+  logo: static/images/logos/logo.png
+  features:
+    - header.autohide
+    - navigation.sections
+    - navigation.top
+    - toc.integrate
+    - content.tabs.link
+
+plugins:
+  - mkdocs-video
+
+extra_css:
+- static/css/custom.css
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - mkdocs_click
+  - attr_list
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
