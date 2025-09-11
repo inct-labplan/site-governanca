@@ -1,7 +1,3 @@
-
-## O que é 
-
-
 ## Qual o sentido da política de governança?
 
 O objetivo da Política de Governança de Dados do INCT-LABPLAN é de construir um conjunto de diretrizes, processos e padrões formais que estabelecem como os dados de pesquisa são coletados, tratados, armazenados, gerenciados e compartilhados. 
@@ -44,5 +40,3 @@ Para que este modelo funcione, propomos os seguintes papéis:
 * **Pesquisador (Membro da Organização):** Membro de um Eixo de Pesquisa autorizado a inserir e documentar os conjuntos de dados em sua respectiva Organização. O pesquisador é responsável pela qualidade e pela correta catalogação dos dados que sobe na plataforma.
 
 Em suma, esta política estabelece que **os dados pertencem e são geridos pelos Eixos de Pesquisa que os produzem**. Ao fazer isso, o INCT garante não só a autonomia necessária para a atividade de pesquisa, mas também a responsabilidade e o cuidado para a construção de um repositório de dados rico, confiável e bem organizado.
-
-
