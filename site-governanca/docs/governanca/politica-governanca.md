@@ -66,19 +66,3 @@ Em suma, esta política estabelece que **os dados pertencem e são geridos pelos
 Um ponto importante para o sucesso de uma política de governança é o acesso a ferramentas que tornam a política executável no dia a dia. A infraestrutura de dados do INCT foi desenhada para que cada componente tecnológico desempenhe um papel específico na implementação das diretrizes propostas.
 
 !!! Tip "Veja a descrição completa de cada ferramenta na seção de [Componentes da Infraestrutura](../infraestrutura/componentes-infraestrutura.md)"
-
-O CKAN
-
-O CKAN é a plataforma onde a governança se materializa. Ele funciona como o repositório centralizado que aplica as regras de organização e acesso definidas nesta política. É no CKAN que os Eixos de Pesquisa se tornam "Organizações" com responsabilidades claras, onde os metadados padronizados são exigidos para garantir a qualidade e a capacidade de descoberta dos dados, e onde o controle de acesso (público vs. privado) é gerenciado. Ele é o executor final das nossas regras de catalogação, publicação e compartilhamento.
-
-O R
-
-O R é a ferramenta que operacionaliza a governança na origem do dado. Ele garante a qualidade e a padronização desde o início do processo, pois é nos scripts de R que as regras do nosso Manual de Estilo (tipagem, nomenclatura, documentação) são aplicadas durante a coleta e o tratamento. Ao padronizar a linguagem de manipulação de dados, garantimos que os procedimentos sejam consistentes e transparentes, formando a base para a produção de dados confiáveis e reprodutíveis.
-
-O GitHub
-
-O GitHub funciona como o pilar da transparência e da validação metodológica da nossa política. Ele operacionaliza a exigência de reprodutibilidade ao servir como um repositório central para todo o código R que gera os dados. Sua principal função na governança é habilitar o processo de revisão por pares (peer review) através de Pull Requests, um ponto de controle obrigatório que assegura que o código foi validado por outros pesquisadores antes de ser usado para gerar os dados finais que serão depositados no CKAN.
-
-O Shiny
-
-O Shiny operacionaliza o objetivo final da governança: comunicar e dar sentido aos dados de forma responsável. Ele permite transformar os dados validados e catalogados no CKAN em aplicações web interativas, como painéis e simuladores. Dentro da política, o Shiny garante que a comunicação dos resultados da pesquisa seja feita a partir de uma fonte de dados controlada e confiável (o CKAN), assegurando que as análises compartilhadas com outros pesquisadores e com a sociedade estejam sempre alinhadas à versão mais atual e aprovada dos dados.
