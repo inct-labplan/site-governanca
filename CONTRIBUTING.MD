@@ -7,7 +7,6 @@ Siga as etapas abaixo para configurar o ambiente local e visualizar o site com o
 Antes de começar, certifique-se de ter instalado em sua máquina:
 
 - [Git](https://git-scm.com/)
-- [Python 3.12+](https://www.python.org/downloads/)
 - [uv](https://docs.astral.sh/uv/getting-started/installation/)
 - [Chave SSH do Github configurada](https://www.youtube.com/watch?v=dWj3JEpM6nQ)
 
