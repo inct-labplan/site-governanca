@@ -52,9 +52,9 @@ Por exemplo, poderíamos ter as seguintes Organizações:
 
 Para que este modelo funcione, propomos os seguintes papéis:
 
-* **Administrador do Portal:** Responsável pela infraestrutura do CKAN, pela gestão geral dos usuários e pela criação das Organizações (Eixos). Não interfere no conteúdo dos dados.
+* **Comité de Dados:** São os responsáveis por garantir que os dados e metadados do CKAN atendem aos padrões de qualidade estabelecidos na política de governança. São eles que avaliam se os dados produzidos pelos bolsistas estão aptos a serem compartilhados no CKAN.
 
-* **Coordenador do Eixo (Admin da Organização):** O líder ou ponto focal de cada Eixo de Pesquisa. É responsável por garantir que todos os dados publicados por sua equipe estejam em conformidade com a Política de Governança (ex: metadados preenchidos, licença correta, qualidade dos dados). Ele aprova a publicação final dos datasets.
+* **Coordenador do Eixo (Admin da Organização):** São os responsáveis por garantir a integridade dos dados publicados pelos bolsistas. 
 
 * **Pesquisador (Membro da Organização):** Membro de um Eixo de Pesquisa autorizado a inserir e documentar os conjuntos de dados em sua respectiva Organização. O pesquisador é responsável pela qualidade e pela correta catalogação dos dados que sobe na plataforma.
 
