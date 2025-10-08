@@ -1,0 +1,1101 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../governanca/metadados/">
+      
+      
+      
+      <link rel="icon" href="../../static/images/logos/favicon.jpg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
+    
+    
+      
+        <title>Git e Github com R - Infraestrutura de Dados - INCT LABPLAN</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Lato";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../static/css/custom.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#configurando-git-e-github-no-rstudio" class="md-skip">
+          Ir para o conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href="../.." title="Infraestrutura de Dados - INCT LABPLAN" class="md-header__button md-logo" aria-label="Infraestrutura de Dados - INCT LABPLAN" data-md-component="logo">
+      
+  <img src="../../static/imagens/losgo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Infraestrutura de Dados - INCT LABPLAN
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Git e Github com R
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Mudar para tema escuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Mudar para tema escuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4m0-7c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Mudar para tema claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Mudar para tema claro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5M7 15a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/inct-labplan/site-governanca" title="Ir ao repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    site-governanca
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Infraestrutura de Dados - INCT LABPLAN" class="md-nav__button md-logo" aria-label="Infraestrutura de Dados - INCT LABPLAN" data-md-component="logo">
+      
+  <img src="../../static/imagens/losgo.svg" alt="logo">
+
+    </a>
+    Infraestrutura de Dados - INCT LABPLAN
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/inct-labplan/site-governanca" title="Ir ao repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    site-governanca
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Home
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Olá!
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_2" id="__nav_1_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Governança de Dados
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            Governança de Dados
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../governanca/politica-governanca/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Política de Governança
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../governanca/politica-governanca-exemplos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Exemplos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_3" id="__nav_1_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Visão geral da infraestrutura
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_3">
+            <span class="md-nav__icon md-icon"></span>
+            Visão geral da infraestrutura
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../infraestrutura/componentes-infraestrutura/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Componentes da Infraestrutura
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_4" id="__nav_1_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Processo de Dados
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_4">
+            <span class="md-nav__icon md-icon"></span>
+            Processo de Dados
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../processo-dados/subida-dados/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Processo de dados
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../processo-dados/repositorio-codigo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Repositório de Código
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_5" id="__nav_1_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Padrões de Dados e Metadados
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_5">
+            <span class="md-nav__icon md-icon"></span>
+            Padrões de Dados e Metadados
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../governanca/manual-estilo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Manual de Estilo
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../governanca/metadados/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Metadados
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_1_6" id="__nav_1_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Tutoriais
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1_6">
+            <span class="md-nav__icon md-icon"></span>
+            Tutoriais
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Git e Github com R
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Git e Github com R
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#objetivos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Objetivos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instacao-e-configuracao-do-git-no-rstudio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instação e configuração do git no Rstudio
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Instação e configuração do git no Rstudio">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configurando-o-git" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configurando o Git
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interagindo-com-o-repositorio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Interagindo com o repositório
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Interagindo com o repositório">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#criar-uma-branch-ramos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Criar uma branch (Ramos)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enviar-a-alteracao-para-o-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enviar a alteração para o Github!
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#abrir-um-pull-request" class="md-nav__link">
+    <span class="md-ellipsis">
+      Abrir um Pull Request
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vocabulario" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vocabulário
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Vocabulário">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#repositorio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Repositório
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#commits" class="md-nav__link">
+    <span class="md-ellipsis">
+      Commits
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#branches-ramos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Branches (Ramos)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#repositorios-locais-e-remotos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Repositórios locais e remotos
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      Referências
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<div><h1 id="configurando-git-e-github-no-rstudio">Configurando git e github no Rstudio</h1>
+<p>Para seguir este tutorial sem problemas, você precisará de:
+    - Uma conta ativa no GitHub.
+    - R e RStudio já instalados na sua máquina.</p>
+<h2 id="objetivos">Objetivos</h2>
+<ul>
+<li>
+<p>Conectar o RStudio à sua conta do GitHub.</p>
+</li>
+<li>
+<p>Entender o fluxo básico para sincronizar alterações entre seu computador e um repositório remoto.</p>
+</li>
+<li>
+<p>Praticar a interação com um repositório para atividades de padronização e análise de dados.</p>
+</li>
+</ul>
+<h2 id="instacao-e-configuracao-do-git-no-rstudio">Instação e configuração do git no Rstudio</h2>
+<h3 id="configurando-o-git">Configurando o Git</h3>
+<blockquote>
+<p>Querid@s respirem! Essa configuração chata só precisa ser feita uma vez :) </p>
+</blockquote>
+<ol>
+<li>
+<p>Fazer o download e instalar o programa <a href="https://git-scm.com/downloads">Git</a></p>
+</li>
+<li>
+<p>Configurar token de acesso Github</p>
+<ul>
+<li>"O pacote usethis automatiza tarefas repetitivas que surgem durante o desenvolvimento de projetos em R, sejam eles pacotes ou projetos de análise. Ele é projetado para minimizar o trabalho de configuração e padronizar as boas práticas de desenvolvimento. Com funções simples, o usethis facilita a criação de projetos, a configuração do versionamento com Git e a integração com o GitHub, permitindo que você se concentre mais no código e menos na estrutura e configuração do seu ambiente de trabalho."<blockquote>
+<p>Explicação gerada pelo Gemini</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="c1"># Instala o pacote 'usethis' a partir do repositório oficial CRAN, </span>
+<span class="c1"># caso você ainda não o tenha em sua máquina.</span>
+<span class="nf">install.packages</span><span class="p">(</span><span class="s">'usethis'</span><span class="p">)</span>
+
+<span class="c1"># Carrega o pacote 'usethis' na sua sessão atual do R,</span>
+<span class="c1"># tornando suas funções disponíveis para uso.</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">usethis</span><span class="p">)</span>
+
+<span class="c1"># 1. Criar o token de acesso no Github</span>
+<span class="c1"># Esta função abre uma página no seu navegador para a criação de um </span>
+<span class="c1"># Token de Acesso Pessoal (PAT) no GitHub. O 'usethis' já pré-seleciona </span>
+<span class="c1"># as permissões (scopes) recomendadas para a integração entre o R e o GitHub.</span>
+<span class="n">usethis</span><span class="o">::</span><span class="nf">create_github_token</span><span class="p">()</span>
+
+<span class="c1"># 2. Configurar o token criado no RStudio</span>
+<span class="c1"># Após copiar o token gerado no GitHub, esta função (do pacote 'gitcreds')</span>
+<span class="c1"># abre um prompt para que você cole o token. Ele será armazenado de forma</span>
+<span class="c1"># segura no seu computador, permitindo que o RStudio se autentique no GitHub</span>
+<span class="c1"># sem que você precise digitar sua senha a cada interação.</span>
+<span class="n">gitcreds</span><span class="o">::</span><span class="nf">gitcreds_set</span><span class="p">()</span>
+</code></pre></div>
+<p>Protinho! Agora temos o git e o github configurados!</p>
+<ol>
+<li>Clonar o repositório de dados do projeto</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="c1"># Esta função do pacote 'usethis' automatiza o processo de clonar um repositório </span>
+<span class="c1"># do GitHub para o seu computador local e, ao mesmo tempo, o configura como um  novo projeto no RStudio.</span>
+
+<span class="c1"># O argumento "inct-labplan/dados" especifica o repositório a ser clonado, seguindo o formato "nome_do_usuario_ou_organizacao/nome_do_repositorio".</span>
+
+<span class="c1">#Em resumo, este comando irá:</span>
+<span class="c1"># 1. Clonar o repositório 'dados' da organização 'inct-labplan'.</span>
+<span class="c1"># 2. Criar uma nova pasta chamada 'dados' no seu diretório local.</span>
+<span class="c1"># 3. Abrir um novo projeto RStudio dentro dessa pasta, já conectado ao repositório.</span>
+
+<span class="n">usethis</span><span class="o">::</span><span class="nf">create_from_github</span><span class="p">(</span><span class="s">"inct-labplan/dados"</span><span class="p">)</span>
+</code></pre></div>
+<p>O resultado é um repositório Local que, no momento, é uma cópia identica ao repositório Remoto.</p>
+<blockquote>
+<p>Veja a seção para entender mais sobre repositórios <a href="#reposit%C3%B3rios-locais-e-remotos">Locais e Remotos</a></p>
+</blockquote>
+<h3 id="interagindo-com-o-repositorio">Interagindo com o repositório</h3>
+<h4 id="criar-uma-branch-ramos">Criar uma branch (Ramos)</h4>
+<blockquote>
+<p>Veja a seção de vocabulário para uma explicação sobre o conceito de <a href="#branches-ramos">branch</a></p>
+</blockquote>
+<h4 id="enviar-a-alteracao-para-o-github">Enviar a alteração para o Github!</h4>
+<h4 id="abrir-um-pull-request">Abrir um Pull Request</h4>
+<h2 id="vocabulario">Vocabulário</h2>
+<blockquote>
+<p>Disclaimer: Com exceção de algumas modificações, esta seção foi copiada do livro Manual de R para epidemiologistas capítulo 46.4 Vocabulário, conceitos e funções básicas. Disponível em: <a href="https://www.epirhandbook.com/pt/new_pages/collaboration.pt.html">link</a> Acesso em 08/10/2025. Todo o crédito para os autores.</p>
+</blockquote>
+<h4 id="repositorio"><strong>Repositório</strong></h4>
+<p>Um repositório Git (“repo”) é uma pasta que contém todas as subpastas e arquivos do seu projeto (dados, códigos, imagens etc.), além dos seus históricos de revisão. Quando você começar a rastrear as alterações no repositório com o Git, ele criará uma pasta oculta que contém todas as informações de rastreamento.</p>
+<h4 id="commits"><strong>Commits</strong></h4>
+<p>Um commit é um snapshot do projeto, ou seja, uma foto instantânea de um determinado momento. Ao fazer uma alteração no projeto, você fará um novo commit para rastrear as alterações (o delta) feitas em seus arquivos. Por exemplo, talvez você tenha editado algumas linhas de código e atualizado um conjunto de dados. Depois que suas alterações forem salvas, você pode agrupar essas alterações em um “commit”.</p>
+<p>Cada commit possui um ID exclusivo (um hash). Para fins de controle de versão, você pode recuperar seu projeto no tempo com base em commits, então é melhor mantê-los relativamente pequenos e coerentes. Você também anexará uma breve descrição das mudanças, chamada de “mensagem de confirmação”.</p>
+<p>Mudanças graduais? Preparar mudanças é adicioná-las à área de teste, em preparação para o próximo commit. A ideia é que você possa decidir com precisão quais alterações incluir em um determinado commit. Por exemplo, se você trabalhou na especificação do modelo em um script e, posteriormente, trabalhou em uma figura em outro script, faria sentido ter dois commits diferentes (seria mais fácil no caso de você querer reverter as mudanças na figura, mas não o modelo).</p>
+<h4 id="branches-ramos"><strong>Branches (Ramos)</strong></h4>
+<p>Um branch representa uma linha independente de mudanças em seu repo, uma versão paralela e alternativa de seus arquivos de projeto.</p>
+<p>Branches são úteis para testar mudanças antes de serem incorporadas ao branch principal, que geralmente é a versão primária / final / “ativa” do seu projeto. Quando você terminar de experimentar em um branch, você pode trazer as alterações para o seu branch principal, mesclando, ou excluí-lo, se as alterações não foram tão bem-sucedidas.</p>
+<p><strong>Observação:</strong> você não precisa colaborar com outras pessoas para usar branches, nem precisa ter um repositório online remoto.</p>
+<h4 id="repositorios-locais-e-remotos"><strong>Repositórios locais e remotos</strong></h4>
+<ul>
+<li>"Clones" de repositórios
+Clonar é criar uma cópia de um repositório Git em outro lugar.</li>
+</ul>
+<p>Por exemplo, você pode clonar um repositório online do Github localmente em seu computador, ou começar com um repositório local e cloná-lo online para Github.</p>
+<p>Quando você clona um repositório, os arquivos do projeto ficam em dois lugares:</p>
+<pre><code>no repositório **LOCAL**, em seu computador físico. É aqui que você faz as mudanças reais nos arquivos / códigos.
+
+no repositório online **REMOTO**: versões dos seus arquivos de projeto no repositório Github (ou em qualquer outro site hospedeiro).
+</code></pre>
+<p>Para sincronizar esses repositórios, usaremos mais funções. Na verdade, ao contrário do Sharepoint, Dropbox ou outro software de sincronização, o Git não atualiza automaticamente seu repositório local baseado naquele que está online ou vice-versa. Você pode escolher quando e como sincronizar.</p>
+<pre><code>- **git fetch** baixa as novas mudanças do repositório remoto, mas não muda seu repositório local. Pense nela como uma verificação de estado do repositório remoto.
+
+- **git pull** baixa as novas mudanças dos repositórios remotos e atualiza seu repositório local.
+
+Quando você tiver feito um ou vários commits localmente, você pode usar git push para atualizar os commits no repositório remoto. Isso envia suas alterações no Github para que outras pessoas possam vê-las e acessá-las, se quiserem.
+</code></pre>
+<h2 id="referencias">Referências</h2>
+<ul>
+<li>
+<p>Manual de R para Epidemiologistas - <a href="https://www.epirhandbook.com/pt/new_pages/collaboration.pt.html">Controle de versão e colaboração com Git e Github</a></p>
+</li>
+<li>
+<p>Introdução à utilização do Git e GitHub no RStudio - 
+<a href="https://beatrizmilz.github.io/slidesR/git_rstudio/11-2021-ENCE.html#1">5ª Semana de Iniciação Científica da ENCE</a></p>
+</li>
+<li>
+<p>Curso R - <a href="https://curso-r.github.io/zen-do-r/git-github.html">Git e GitHub</a></p>
+</li>
+<li>
+<p><a href="https://happygitwithr-com.translate.goog/rstudio-git-github.html?_x_tr_sl=en&amp;_x_tr_tl=pt&amp;_x_tr_hl=pt&amp;_x_tr_pto=tc">Happy Git and GitHub for the useR (traduzido)</a> - Tutorial detalhado sobre o uso de git e github com R</p>
+</li>
+</ul></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Voltar ao topo
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["header.autohide", "navigation.sections", "navigation.top", "toc.integrate", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "Mais 1 nesta p\u00e1gina", "search.result.more.other": "Mais # nesta p\u00e1gina", "search.result.none": "Nenhum resultado encontrado", "search.result.one": "1 resultado encontrado", "search.result.other": "# resultados encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.92b07e13.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,1143 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../politica-governanca/">
+      
+      
+        <link rel="next" href="../../infraestrutura/componentes-infraestrutura/">
+      
+      
+      <link rel="icon" href="../../static/images/logos/favicon.jpg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
+    
+    
+      
+        <title>Exemplos - Infraestrutura de Dados - INCT LABPLAN</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Lato";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../static/css/custom.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#como-a-politica-de-governanca-resolve-problemas-do-dia-a-dia" class="md-skip">
+          Ir para o conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href="../.." title="Infraestrutura de Dados - INCT LABPLAN" class="md-header__button md-logo" aria-label="Infraestrutura de Dados - INCT LABPLAN" data-md-component="logo">
+      
+  <img src="../../static/imagens/losgo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Infraestrutura de Dados - INCT LABPLAN
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Exemplos
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Mudar para tema escuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Mudar para tema escuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4m0-7c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Mudar para tema claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Mudar para tema claro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5M7 15a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/inct-labplan/site-governanca" title="Ir ao repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    site-governanca
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Infraestrutura de Dados - INCT LABPLAN" class="md-nav__button md-logo" aria-label="Infraestrutura de Dados - INCT LABPLAN" data-md-component="logo">
+      
+  <img src="../../static/imagens/losgo.svg" alt="logo">
+
+    </a>
+    Infraestrutura de Dados - INCT LABPLAN
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/inct-labplan/site-governanca" title="Ir ao repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    site-governanca
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Home
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Olá!
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_1_2" id="__nav_1_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Governança de Dados
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            Governança de Dados
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../politica-governanca/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Política de Governança
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Exemplos
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Exemplos
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#caso-1-localizacao-de-dados-por-tema-transversal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Caso 1: Localização de Dados por Tema Transversal
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Caso 1: Localização de Dados por Tema Transversal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#problema-sem-governanca" class="md-nav__link">
+    <span class="md-ellipsis">
+      Problema sem Governança
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#solucao-com-governanca" class="md-nav__link">
+    <span class="md-ellipsis">
+      Solução com Governança
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#caso-2-rastreamento-de-metodologia-e-validacao-de-codigo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Caso 2: Rastreamento de Metodologia e Validação de Código
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Caso 2: Rastreamento de Metodologia e Validação de Código">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#problema-sem-governanca_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Problema sem Governança
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#solucao-com-governanca_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Solução com Governança
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#caso-3-gestao-de-dados-sensiveis-e-embargados" class="md-nav__link">
+    <span class="md-ellipsis">
+      Caso 3: Gestão de Dados Sensíveis e Embargados
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Caso 3: Gestão de Dados Sensíveis e Embargados">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#problema-sem-governanca_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Problema sem Governança
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#solucao-com-governanca_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Solução com Governança
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#caso-4-integracao-de-dados-geoespaciais" class="md-nav__link">
+    <span class="md-ellipsis">
+      Caso 4: Integração de Dados Geoespaciais
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Caso 4: Integração de Dados Geoespaciais">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#problema-sem-governanca_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Problema sem Governança
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#solucao-com-governanca_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Solução com Governança
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#caso-5-historico-de-atualizacoes-e-correcoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Caso 5: Histórico de Atualizações e Correções
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Caso 5: Histórico de Atualizações e Correções">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#problema-sem-governanca_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Problema sem Governança
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#solucao-com-governanca_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Solução com Governança
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_3" id="__nav_1_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Visão geral da infraestrutura
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_3">
+            <span class="md-nav__icon md-icon"></span>
+            Visão geral da infraestrutura
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../infraestrutura/componentes-infraestrutura/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Componentes da Infraestrutura
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_4" id="__nav_1_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Processo de Dados
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_4">
+            <span class="md-nav__icon md-icon"></span>
+            Processo de Dados
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../processo-dados/subida-dados/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Processo de dados
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../processo-dados/repositorio-codigo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Repositório de Código
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_5" id="__nav_1_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Padrões de Dados e Metadados
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_5">
+            <span class="md-nav__icon md-icon"></span>
+            Padrões de Dados e Metadados
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../manual-estilo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Manual de Estilo
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../metadados/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Metadados
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_6" id="__nav_1_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Tutoriais
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_6">
+            <span class="md-nav__icon md-icon"></span>
+            Tutoriais
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutoriais/git-github-R/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Git e Github com R
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<div><h1 id="como-a-politica-de-governanca-resolve-problemas-do-dia-a-dia">Como a Política de Governança Resolve Problemas do Dia a Dia</h1>
+<div class="admonition tip">
+<p class="admonition-title">EM CONSTRUÇÃO: Exemplos provisórios gerados com Gemini</p>
+</div>
+<h2 id="caso-1-localizacao-de-dados-por-tema-transversal">Caso 1: Localização de Dados por Tema Transversal</h2>
+<h3 id="problema-sem-governanca">Problema sem Governança</h3>
+<p><strong>Contexto</strong>: Pesquisadora precisa encontrar todos os dados relacionados a "mobilidade urbana" produzidos pelo INCT, independentemente do Eixo que os produziu.</p>
+<p><strong>O que acontece sem governança:</strong>
+- Maria precisa entrar em contato com coordenadores de todos os 4 Eixos
+- Cada Eixo tem sua própria forma de organizar dados
+- Alguns dados sobre mobilidade estão "escondidos" em pesquisas sobre clima (Eixo 2)
+- Outros estão em estudos demográficos (Eixo 4)
+- Impossível saber se encontrou todos os dados relevantes
+- Dados relacionados mas com nomes completamente diferentes</p>
+<h3 id="solucao-com-governanca">Solução com Governança</h3>
+<p><strong>Como o sistema de Tags do CKAN resolve:</strong></p>
+<ul>
+<li>Todos os datasets relacionados têm a tag "mobilidade-urbana"</li>
+<li>Busca simples retorna dados de todos os Eixos:<ul>
+<li>Eixo 1: Dataset com tag "mobilidade-urbana" + "infraestrutura"</li>
+<li>Eixo 2: Dataset com tags "mobilidade-urbana" + "emissoes-veiculares"</li>
+<li>Eixo 4: Dataset com tags "mobilidade-urbana" + "deslocamento-trabalho"</li>
+</ul>
+</li>
+<li>Metadados personalizados incluem campo "tema_transversal"</li>
+<li>
+<p>Filtros combinados: Grupo "Estudos Urbanos" + Tag "mobilidade-urbana"</p>
+</li>
+<li>
+<p><strong>Resultado</strong>: Todos os dados localizados em uma única busca</p>
+</li>
+</ul>
+<h2 id="caso-2-rastreamento-de-metodologia-e-validacao-de-codigo">Caso 2: Rastreamento de Metodologia e Validação de Código</h2>
+<h3 id="problema-sem-governanca_1">Problema sem Governança</h3>
+<p><strong>Situação</strong>: Durante revisão de artigo científico, revisor questiona os resultados de uma análise estatística complexa sobre desigualdade territorial.</p>
+<p><strong>O que acontece sem governança:</strong>
+- Script R usado está no computador pessoal do pesquisador
+- Versão do código diferente da que gerou os resultados publicados
+- Sem documentação sobre parâmetros utilizados
+- Impossível reproduzir exatamente os mesmos resultados
+- Não há registro de quem revisou o código
+- Dúvidas sobre possíveis erros não detectados</p>
+<h3 id="solucao-com-governanca_1">Solução com Governança</h3>
+<p><strong>Como os metadados personalizados e integração GitHub resolvem:</strong></p>
+<p><strong>No CKAN - Metadados personalizados do dataset:</strong></p>
+<div class="highlight"><pre><span></span><code>- campo: "repositorio_codigo" → link para GitHub
+</code></pre></div>
+<p><strong>No GitHub - Processo de revisão:</strong>
+- Pull Request #45: "Análise de clusters espaciais"
+- Código comentado linha por linha
+- Issues abertas: "Verificar outliers na linha 234"
+- Revisão por pares documentada nos comentários
+- Tests automatizados rodando via GitHub Actions
+- Badge mostrando que todos os testes passaram</p>
+<p><strong>Integração CKAN-GitHub:</strong>
+- Dataset no CKAN tem link direto para o arquivo de código
+- README do GitHub referencia o dataset no CKAN
+- <strong>Resultado</strong>: Reprodutibilidade total e rastreabilidade completa</p>
+<h2 id="caso-3-gestao-de-dados-sensiveis-e-embargados">Caso 3: Gestão de Dados Sensíveis e Embargados</h2>
+<h3 id="problema-sem-governanca_2">Problema sem Governança</h3>
+<p><strong>Situação</strong>: Eixo 3 possui dados de uma pesquisa sobre políticas públicas municipais com informações que não podem ser divulgadas antes da publicação do artigo principal.</p>
+<p><strong>O que acontece sem governança:</strong>
+- Dados ficam no computador do coordenador
+- Outros membros do Eixo não sabem que os dados existem
+- Pesquisador novo publica preliminares sem saber do embargo
+- Conflito sobre quem pode acessar antes da publicação
+- Após publicação, ninguém lembra de disponibilizar os dados
+- Perda de oportunidade de colaboração interna</p>
+<h3 id="solucao-com-governanca_2">Solução com Governança</h3>
+<p><strong>Como Grupos e metadados personalizados resolvem:</strong></p>
+<p><strong>Configuração no CKAN:</strong>
+- Dataset criado no Grupo privado: "Eixo3-Embargado"
+- Metadados personalizados:
+  - campo: "status_embargo" → "embargado_ate_2024-12-01"
+  - campo: "motivo_embargo" → "publicação_artigo_revista_X"
+  - campo: "responsavel_liberacao" → "coord.eixo3@inct.br"
+- Visibilidade: Apenas membros do Eixo 3
+- Agendamento automático para mudança de status</p>
+<p><strong>Após o período de embargo:</strong>
+- Sistema notifica responsável
+- Dataset movido para Grupo público: "Eixo3-Publicado"
+- Tags adicionadas: "politicas-publicas", "gestao-municipal"
+- <strong>Benefício</strong>: Controle total sobre temporalidade de acesso</p>
+<hr>
+<h2 id="caso-4-integracao-de-dados-geoespaciais">Caso 4: Integração de Dados Geoespaciais</h2>
+<h3 id="problema-sem-governanca_3">Problema sem Governança</h3>
+<p><strong>Situação</strong>: Projeto necessita integrar dados geoespaciais de diferentes fontes - limites municipais, dados climáticos, e indicadores socioeconômicos.</p>
+<p><strong>O que acontece sem governança:</strong>
+- Dados em diferentes sistemas de coordenadas (WGS84, SIRGAS2000, SAD69)
+- Alguns em formato Shapefile, outros em GeoJSON, alguns em KML
+- Sem informação sobre escala ou precisão
+- Metadados geoespaciais ausentes ou incompletos
+- Impossível saber se os dados são compatíveis para análise conjunta
+- Erros de sobreposição não detectados</p>
+<h3 id="solucao-com-governanca_3">Solução com Governança</h3>
+<p><strong>Como metadados CKAN especializados resolvem:</strong></p>
+<p><strong>Metadados geoespaciais obrigatórios:</strong>
+</p><div class="highlight"><pre><span></span><code>- campo: "sistema_coordenadas" → "EPSG:4674 (SIRGAS2000)"
+- campo: "extensao_geografica" → bbox em GeoJSON
+- campo: "escala_origem" → "1:250.000"
+- campo: "precisao_posicional" → "10 metros"
+- campo: "data_referencia_espacial" → "2024-01-01"
+</code></pre></div>
+<p><strong>Organização por Grupos temáticos:</strong>
+- Grupo: "Dados-Geoespaciais-Base"
+- Grupo: "Indicadores-Territoriais"
+- Tags combinadas: "geoespacial", "municipios", "2024"</p>
+<p><strong>Validação automática:</strong>
+- Script verifica compatibilidade de sistemas de coordenadas
+- Alerta para incompatibilidades antes do download
+- <strong>Resultado</strong>: Dados sempre prontos para integração espacial</p>
+<hr>
+<h2 id="caso-5-historico-de-atualizacoes-e-correcoes">Caso 5: Histórico de Atualizações e Correções</h2>
+<h3 id="problema-sem-governanca_4">Problema sem Governança</h3>
+<p><strong>Situação</strong>: Descoberto erro em dados de população que já foram utilizados em 3 diferentes estudos publicados.</p>
+<p><strong>O que acontece sem governança:</strong>
+- Impossível saber quem usou os dados incorretos
+- Sem registro de quando o erro foi introduzido
+- Não há como notificar usuários afetados
+- Cada estudo precisa ser verificado manualmente
+- Correção aplicada mas sem documentação
+- Risco de perpetuação do erro em trabalhos futuros</p>
+<h3 id="solucao-com-governanca_4">Solução com Governança</h3>
+<p><strong>Como o versionamento e metadados de mudança resolvem:</strong></p>
+<p><strong>Sistema de versionamento no CKAN:</strong>
+</p><div class="highlight"><pre><span></span><code>Dataset: EIXO4_POPULACAO_MUNICIPAL_2024
+- V1.0 (2024-01-15): Dados originais
+- V1.1 (2024-03-20): Correção município código 3550308
+- V2.0 (2024-06-01): Inclusão estimativas 2024
+</code></pre></div>
+<p><strong>Metadados personalizados de correção:</strong>
+</p><div class="highlight"><pre><span></span><code>- campo: "tipo_mudanca" → "correção_erro"
+- campo: "descricao_mudanca" → "População SP corrigida de 11.451.999 para 12.451.999"
+- campo: "impacto_mudanca" → "alto - afeta cálculos de densidade"
+- campo: "usuarios_notificados" → "sim - email em 2024-03-21"
+</code></pre></div>
+<p><strong>Recursos adicionais:</strong>
+- Changelog detalhado como recurso do dataset
+- Script de verificação de impacto disponível
+- Lista de publicações que citaram cada versão
+- <strong>Garantia</strong>: Rastreabilidade completa de todas as mudanças</p></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Voltar ao topo
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["header.autohide", "navigation.sections", "navigation.top", "toc.integrate", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "Mais 1 nesta p\u00e1gina", "search.result.more.other": "Mais # nesta p\u00e1gina", "search.result.none": "Nenhum resultado encontrado", "search.result.one": "1 resultado encontrado", "search.result.other": "# resultados encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.92b07e13.min.js"></script>
+      
+    
+  </body>
+</html>
