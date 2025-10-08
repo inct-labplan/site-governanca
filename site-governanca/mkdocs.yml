@@ -14,6 +14,8 @@ nav:
     - Padrões de Dados e Metadados:
       - Manual de Estilo: governanca/manual-estilo.md
       - Metadados: governanca/metadados.md
+    - Tutoriais:
+      - Git e Github com R: tutoriais/git-github-R.md
 
 repo_url: https://github.com/inct-labplan/site-governanca#
 repo_name: site-governanca
